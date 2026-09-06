@@ -1,3 +1,10 @@
+import { db } from "./firebase.js";
+import {
+  doc,
+  setDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 
@@ -105,23 +112,35 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
-function confirmInvitation() {
+async function confirmInvitation() {
   if (!validateForm()) return;
 
-  /*
-    Пока данные никуда не отправляются.
-    Здесь позже будет Firebase:
+  const guestKey = getGuestKey();
+  const guest = GUESTS[guestKey] || GUESTS.dima;
 
-    await addDoc(collection(db, "responses"), {
-      guest: getGuestKey(),
+  try {
+    await setDoc(doc(db, "responses", guestKey), {
+      guestKey: guestKey,
+      name: guest.name,
+
       drinks: selections.drinks,
       food: selections.food,
-      foodNotes: $("#foodNotes").value.trim(),
       sleepover: selections.sleepover,
-      comment: $("#comment").value.trim(),
-      createdAt: serverTimestamp()
+
+      status: "confirmed",
+      submittedAt: serverTimestamp()
     });
-  */
+
+    console.log("Ответ сохранён!");
+
+    openModal();
+
+  } catch (error) {
+    console.error("Ошибка сохранения:", error);
+
+    alert("Не удалось отправить ответ. Попробуй ещё раз.");
+  }
+} 
 
   console.log("Ответ гостя:", {
     guest: getGuestKey(),
