@@ -41,7 +41,7 @@ function loadPartyInfo() {
 const selections = {
   drinks: [],
   food: [],
-  sleepover: null
+  smoking: []
 };
 
 function setupChoices() {
@@ -90,8 +90,8 @@ function validateForm() {
     return false;
   }
 
-  if (!selections.sleepover) {
-    alert("Выбери что будешь курить");
+  if (selections.smoking.length === 0) {
+    alert("Выбери вариант по курению");
     return false;
   }
 
@@ -124,7 +124,7 @@ async function confirmInvitation() {
       name: guest.name,
       drinks: selections.drinks,
       food: selections.food,
-      sleepover: selections.sleepover,
+      smoking: selections.smoking,
       status: "confirmed",
       submittedAt: serverTimestamp()
     });
