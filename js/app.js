@@ -16,9 +16,10 @@ function getGuestKey() {
 function loadGuest() {
   const key = getGuestKey();
   const guest = GUESTS[key] || GUESTS.dima;
-
+ 
   $("#guestPhoto").style.backgroundImage = `url("${guest.photo}")`;
   $("#guestGreeting").textContent = guest.greeting || "Будем ждать тебя ❤️";
+  $("#guestName").textContent = guest.name;
   
 
   document.title = `Ты приглашён, ${guest.name} — День рождения`;
@@ -73,17 +74,17 @@ function setupChoices() {
 
 function validateForm() {
   if (selections.drinks.length === 0) {
-    alert("Выбери, что ты будешь пить 🙂");
+    alert("Выбери, что ты будешь пить");
     return false;
   }
 
   if (selections.food.length === 0) {
-    alert("Выбери хотя бы один вариант еды 🙂");
+    alert("Выбери хотя бы один вариант еды");
     return false;
   }
 
   if (!selections.sleepover) {
-    alert("Укажи, будешь ли ты ночевать.");
+    alert("Выбери что будешь курить");
     return false;
   }
 
