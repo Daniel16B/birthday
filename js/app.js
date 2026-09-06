@@ -140,7 +140,7 @@ async function confirmInvitation() {
 
     alert("Не удалось отправить ответ. Попробуй ещё раз.");
   }
-} 
+}
 
   console.log("Ответ гостя:", {
     guest: getGuestKey(),
