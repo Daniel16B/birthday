@@ -19,7 +19,7 @@ const PARTY_CONFIG = {
 const GUESTS = {
   dima: {
     name: "Дима",
-    photo: "/birthday/images/maga.jpg",
+    photo: "images/dima.jpg",
     greeting: "Будем ждать тебя ❤️"
   },
   sasha: {
