@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Админка — День рождения</title>
+
+	<link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+	<div class="admin-container">
+
+		<!-- LOGIN -->
+
+		<section id="loginSection" class="login-section">
+
+			<div class="login-card">
+
+				<h1>Админка</h1>
+				<p>Войди, чтобы посмотреть ответы гостей.</p>
+
+				<form id="loginForm">
+
+					<input type="email" id="email" placeholder="Email" required>
+
+					<input type="password" id="password" placeholder="Пароль" required>
+
+					<button type="submit">
+						Войти
+					</button>
+
+				</form>
+
+				<p id="loginError" class="error"></p>
+
+			</div>
+
+		</section>
+
+
+		<!-- ADMIN PANEL -->
+
+		<section id="adminSection" class="admin-section hidden">
+
+			<header class="admin-header">
+
+				<div>
+					<h1>День рождения</h1>
+					<p>Ответы гостей</p>
+				</div>
+
+				<button id="logoutButton" class="logout-button">
+					Выйти
+				</button>
+
+			</header>
+
+
+			<!-- GENERAL STATS -->
+
+			<div class="stats">
+
+				<div class="stat-card">
+					<span class="stat-icon">✅</span>
+					<div>
+						<strong id="acceptedCount">0</strong>
+						<span>Приняли</span>
+					</div>
+				</div>
+
+				<div class="stat-card">
+					<span class="stat-icon">⏳</span>
+					<div>
+						<strong id="pendingCount">0</strong>
+						<span>Не ответили</span>
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- DRINKS -->
+
+			<div class="dashboard-card">
+
+				<h2>🍺 Напитки</h2>
+
+				<div id="drinksStats" class="stats-list"></div>
+
+			</div>
+
+
+			<!-- FOOD -->
+
+			<div class="dashboard-card">
+
+				<h2>🍕 Еда</h2>
+
+				<div id="foodStats" class="stats-list"></div>
+
+			</div>
+
+
+			<!-- SMOKING -->
+
+			<div class="dashboard-card">
+
+				<h2>🚬 Курение</h2>
+
+				<div id="smokingStats" class="stats-list"></div>
+
+			</div>
+
+
+			<!-- GUESTS -->
+
+			<div class="dashboard-card">
+
+				<div class="section-title">
+
+					<div>
+						<h2>👥 Гости</h2>
+						<p>Нажми на гостя, чтобы посмотреть его выбор</p>
+					</div>
+
+				</div>
+
+				<div id="guestsList" class="guests-list"></div>
+
+			</div>
+
+		</section>
+
+	</div>
+
+
+	<script src="js/config.js"></script>
+	<script type="module" src="js/admin.js"></script>
+
+</body>
+
+</html>
