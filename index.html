@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ты приглашён — День рождения</title>
+  <meta name="description" content="Персональное приглашение на наш общий день рождения">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__photo" id="guestPhoto"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <p class="eyebrow">ПЕРСОНАЛЬНОЕ ПРИГЛАШЕНИЕ</p>
+        <h1>Ты приглашён</h1>
+        <p class="hero__subtitle">на наш общий день рождения</p>
+
+        <div class="hero__details">
+          <span>26 СЕНТЯБРЯ</span>
+          <i></i>
+          <span>14:00</span>
+        </div>
+
+        <p class="guest-greeting" id="guestGreeting">Будем ждать тебя ❤️</p>
+      </div>
+
+      <a class="scroll-hint" href="#details" aria-label="Прокрутить вниз">
+        <span>УЗНАТЬ ПОДРОБНОСТИ</span>
+        <span class="scroll-hint__arrow">↓</span>
+      </a>
+    </section>
+
+    <!-- EVENT INFO -->
+    <section class="section section--details" id="details">
+      <div class="section__inner">
+        <p class="eyebrow eyebrow--dark">ДЕНЬ РОЖДЕНИЯ</p>
+        <h2>Время собираться.</h2>
+        <p class="lead">
+          Два именинника, один праздник и ты в списке приглашённых.
+          Ниже — всё, что нужно знать.
+        </p>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <span class="info-card__icon">📅</span>
+            <p class="info-card__label">ДАТА</p>
+            <h3>26-27 СЕНТЯБРЯ</h3>
+            <p>С 14:00 до 10:00.</p>
+          </article>
+
+          <article class="info-card">
+            <span class="info-card__icon">📍</span>
+            <p class="info-card__label">МЕСТО</p>
+            <h3 id="venueName">Шумахеры</h3>
+            <p id="venueAddress"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="section section--form">
+      <div class="section__inner section__inner--narrow">
+        <p class="eyebrow eyebrow--dark">НЕБОЛЬШАЯ АНКЕТА</p>
+        <h2>Расскажи нам о своих предпочтениях.</h2>
+
+        <!-- Drinks -->
+        <div class="form-block">
+          <div class="form-heading">
+            <span class="form-number">01</span>
+            <div>
+              <h3>Что будешь пить?</h3>
+              <p>Можно выбрать несколько вариантов.</p>
+            </div>
+          </div>
+
+          <div class="choice-grid" data-choice-group="drinks">
+            <button type="button" class="choice" data-value="aznauri">
+              <strong>Aznauri</strong>
+            </button>
+            <button type="button" class="choice" data-value="jagermester">
+              <strong>Jagermester</strong>
+            </button>
+            <button type="button" class="choice" data-value="jimbeam">
+              <strong>Jim Beam</strong>
+            </button>
+            <button type="button" class="choice" data-value="beer">
+              <strong>Пиво</strong>
+            </button>
+            <button type="button" class="choice" data-value="vine">
+              <strong>Вино</strong>
+            </button>
+            <button type="button" class="choice" data-value="shake">
+              <strong>Shake</strong>
+            </button>
+            <button type="button" class="choice choice--wide" data-value="none">
+              <strong>Не пью алкоголь</strong>
+            </button>
+          </div>
+        </div>
+
+        <!-- Food -->
+        <div class="form-block">
+          <div class="form-heading">
+            <span class="form-number">02</span>
+            <div>
+              <h3>А что насчёт еды?</h3>
+            </div>
+          </div>
+
+          <div class="choice-grid choice-grid--food" data-choice-group="food">
+            <button type="button" class="choice" data-value="pizza">
+              <strong>Пицца</strong>
+            </button>
+            <button type="button" class="choice" data-value="meat">
+              <strong>Шашлык</strong>
+            </button>
+            <button type="button" class="choice" data-value="sausages">
+              <strong>Сосиски</strong>
+            </button>
+            <button type="button" class="choice" data-value="potato">
+              <strong>Картошка</strong>
+            </button>
+            <button type="button" class="choice" data-value="salad1">
+              <strong>Салат цезарь</strong>
+            </button>
+            <button type="button" class="choice choice" data-value="salad2">
+              <strong>Салат с сухариками</strong>
+            </button>
+            <button type="button" class="choice choice" data-value="salad3">
+              <strong>Крабовый салат</strong>
+            </button>
+            <button type="button" class="choice choice" data-value="vegetables">
+              <strong>Овощи</strong>
+            </button>
+            <button type="button" class="choice choice" data-value="fruits">
+              <strong>Фрукти</strong>
+            </button>
+            <button type="button" class="choice choice" data-value="anything">
+              <strong>Мне без разницы</strong>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sleepover -->
+        <div class="form-block">
+          <div class="form-heading">
+            <span class="form-number">03</span>
+            <div>
+              <h3>Будешь курить?</h3>
+            </div>
+          </div>
+
+          <div class="choice-grid choice-grid--sleep" data-choice-group="sleepover" data-single="true">
+            <button type="button" class="choice" data-value="kalik">
+              <strong>Кальян</strong>
+            </button>
+            <button type="button" class="choice" data-value="sigi">
+              <strong>Сиги</strong>
+            </button>
+            <button type="button" class="choice" data-value="iqos">
+              <strong>Iqos</strong>
+            </button>
+            <button type="button" class="choice choice--wide" data-value="no">
+              <strong>Нет</strong>
+            </button>
+          </div>
+        </div>
+
+        <button class="confirm-button" id="confirmButton" type="button">
+          <span>Принять приглашение</span>
+          <span class="confirm-button__arrow">→</span>
+        </button>
+
+        <p class="form-note">Нажимая кнопку, ты подтверждаешь, что придёшь на праздник.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Сделано с любовью и небольшим количеством алкоголя.</p>
+      <a href="#top">↑ Наверх</a>
+    </footer>
+  </main>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal" id="successModal" aria-hidden="true">
+    <div class="modal__backdrop"></div>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+      <button class="modal__close" id="closeModal" type="button" aria-label="Закрыть">×</button>
+      <div class="success-icon">✓</div>
+      <p class="eyebrow eyebrow--dark">ГОТОВО</p>
+      <h2 id="successTitle">Приглашение принято!</h2>
+      <p></p>
+      <a class="telegram-button" id="telegramLink" href="#" target="_blank" rel="noopener">
+        Вступить в Telegram
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
