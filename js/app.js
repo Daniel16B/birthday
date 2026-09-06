@@ -122,11 +122,9 @@ async function confirmInvitation() {
     await setDoc(doc(db, "responses", guestKey), {
       guestKey: guestKey,
       name: guest.name,
-
       drinks: selections.drinks,
       food: selections.food,
       sleepover: selections.sleepover,
-
       status: "confirmed",
       submittedAt: serverTimestamp()
     });
@@ -140,16 +138,6 @@ async function confirmInvitation() {
 
     alert("Не удалось отправить ответ. Попробуй ещё раз.");
   }
-}
-
-  console.log("Ответ гостя:", {
-    guest: getGuestKey(),
-    drinks: selections.drinks,
-    food: selections.food,
-    sleepover: selections.sleepover
-  });
-
-  openModal();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
