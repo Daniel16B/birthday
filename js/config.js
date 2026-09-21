@@ -74,7 +74,7 @@ const GUESTS = {
   },
   toha: {
     name: "Антон",
-    photo: "images/nastia.jpg",
+    photo: "images/toha.jpg",
     greeting: ""
   }
 };
