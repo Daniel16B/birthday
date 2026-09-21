@@ -32,19 +32,9 @@ const GUESTS = {
     photo: "images/gleb.jpg",
     greeting: ""
   },
-  vika: {
-    name: "Вика",
-    photo: "images/vika.jpg",
-    greeting: ""
-  },
   dima: {
     name: "Дима",
     photo: "images/dima.jpg",
-    greeting: ""
-  },
-  emma: {
-    name: "Эмма",
-    photo: "images/emma.jpg",
     greeting: ""
   },
   katie: {
@@ -55,11 +45,6 @@ const GUESTS = {
   igor: {
     name: "Игорь",
     photo: "images/igor.jpg",
-    greeting: ""
-  },
-  kolia: {
-    name: "Коля",
-    photo: "images/kolia.jpg",
     greeting: ""
   },
   andrey: {
@@ -84,6 +69,11 @@ const GUESTS = {
   },
   nastia: {
     name: "Настя",
+    photo: "images/nastia.jpg",
+    greeting: ""
+  },
+  toha: {
+    name: "Антон",
     photo: "images/nastia.jpg",
     greeting: ""
   }
