@@ -49,7 +49,7 @@ const GUESTS = {
   },
   andrey: {
     name: "Андрей",
-    photo: "images/andey.jpg",
+    photo: "images/andrey.jpg",
     greeting: ""
   },
   vadia: {
